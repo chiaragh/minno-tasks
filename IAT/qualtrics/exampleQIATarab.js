@@ -109,6 +109,8 @@ var posWords = API.shuffle([
 
 		base_url : {//Where are your images at?
 			image : 'https://baranan.github.io/minno-tasks/images/'
+			
+		fullscreen:true 
 		} 
 	});
 });
