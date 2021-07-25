@@ -21,9 +21,9 @@ var posWords = API.shuffle([
 	return iatExtension({
 
 		category1 : {
-			name : 'Arab Muslims', //Will appear in the data.
+			name : 'Arabische moslims', //Will appear in the data.
 			title : {
-				media : {word : 'Arab Muslims'}, //Name of the category presented in the task.
+				media : {word : 'Arabische moslims'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
@@ -31,13 +31,13 @@ var posWords = API.shuffle([
     		        {word: 'Hakim'},
                 {word: 'Sharif'},
                 {word: 'Yousef'},
-				        {word: 'Wahib'},
+		  {word: 'Wahib'},
             	  {word: 'Akbar'},
             	  {word: 'Muhsin'},
             	  {word: 'Salim'},
                 {word: 'Karim'},
                 {word: 'Habib'},
-				        {word: 'Ashraf'}  
+		  {word: 'Ashraf'}  
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -53,13 +53,13 @@ var posWords = API.shuffle([
     		        {word: 'Ernesto'},
                 {word: 'Matthais'},
                 {word: 'Maarten'},
-				        {word: 'Philippe'},
+		 {word: 'Philippe'},
             	  {word: 'Guillame'},
             	  {word: 'Benoit'},
             	  {word: 'Takuya'},
                 {word: 'Kazuki'},
                 {word: 'Chaiyo'},
-				        {word: 'Marcelo'}
+		  {word: 'Marcelo'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
@@ -113,6 +113,6 @@ var posWords = API.shuffle([
 	
 		} 
 		fullscreen:true 
-		isTouch : global.isTouch
+		isTouch:true
 	});
 });
