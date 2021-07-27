@@ -1,23 +1,22 @@
 define(['pipAPI', 'https://chiaragh.github.io/repository/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
     var posWords = API.shuffle([
-            'Love', 'Cheer', 'Friend', 'Pleasure', 
-            'Adore', 'Cheerful', 'Friendship', 'Joyful', 
-            'Smiling','Cherish', 'Excellent', 'Glad', 
-            'Joyous', 'Spectacular', 'Appealing', 'Delight', 
-            'Excitement', 'Laughing', 'Attractive','Delightful', 
-            'Fabulous', 'Glorious', 'Pleasing', 'Beautiful', 
-            'Fantastic', 'Happy', 'Lovely', 'Terrific', 
-            'Celebrate', 'Enjoy', 'Magnificent', 'Triumph']);
+	    'Liefde', 'Vrolijk', 'Vriend', 'Plezier', 
+            'Vriendschap', 'Vreugde', 'Glimlachen', 'Koesteren', 
+	    'Uitstekend', 'Blij', 'Spectaculair', 'Aantrekkelijk', 
+            'Opwindend', 'Lachen', 'Verrukkelijk','Fantastisch', '
+	    'Aangenaam', 'Mooi', 'Prachtig', 'Gelukkig', 'Geweldig', 
+            'Vieren', 'Genieten', 'Triomf', 'Succes', 'Slim']);
+
   var negWords = API.shuffle([
-            'Abuse', 'Grief', 'Poison', 'Sadness', 
-            'Pain', 'Despise', 'Failure', 'Nasty', 
-            'Angry', 'Detest', 'Horrible', 'Negative', 
-            'Ugly', 'Dirty', 'Gross', 'Evil', 
-            'Rotten','Annoy', 'Disaster', 'Horrific',  
-            'Scorn', 'Awful', 'Disgust', 'Hate', 
-            'Humiliate', 'Selfish', 'Tragic', 'Bothersome', 
-            'Hatred', 'Hurtful', 'Sickening', 'Yucky']);
+            'Misbruik', 'Verdriet', 'Vergif', 'Verdriet', 
+            'Pijn', 'Verachting', 'Mislukking', 'Smerig', 
+            'Boos', 'Verafschuwen', 'Verschrikkelijk', 'Negatief', 
+            'Lelijk', 'Smerig', 'Vuil', 'Kwaad', 'Stinkend'
+            'Verrot', 'Vervelend', 'Rampzalig', 'Afschuwelijk', 'Dom', 
+            'Walging', 'Vernederen', 'Egoïstisch', 'Tragisch', 'Hinderlijk', 
+            'Haat', 'Kwetsend', 'Misselijkmakend', 'Vies']);
+	
 	return iatExtension({
 
 		category1 : {
