@@ -4,7 +4,7 @@ define(['pipAPI', 'https://chiaragh.github.io/repository/IAT/qualtrics/ADD3.js']
 	    'Liefde', 'Vrolijk', 'Vriend', 'Plezier', 
             'Vriendschap', 'Vreugde', 'Glimlachen', 'Koesteren', 
 	    'Uitstekend', 'Blij', 'Spectaculair', 'Aantrekkelijk', 
-            'Opwindend', 'Lachen', 'Verrukkelijk','Fantastisch', '
+            'Opwindend', 'Lachen', 'Verrukkelijk','Fantastisch',
 	    'Aangenaam', 'Mooi', 'Prachtig', 'Gelukkig', 'Geweldig', 
             'Vieren', 'Genieten', 'Triomf', 'Succes', 'Slim']);
 
