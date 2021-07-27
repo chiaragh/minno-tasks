@@ -12,7 +12,7 @@ define(['pipAPI', 'https://chiaragh.github.io/repository/IAT/qualtrics/ADD3.js']
             'Misbruik', 'Verdriet', 'Vergif', 'Verdriet', 
             'Pijn', 'Verachting', 'Mislukking', 'Smerig', 
             'Boos', 'Verafschuwen', 'Verschrikkelijk', 'Negatief', 
-            'Lelijk', 'Smerig', 'Vuil', 'Kwaad', 'Stinkend'
+            'Lelijk', 'Smerig', 'Vuil', 'Kwaad', 'Stinkend',
             'Verrot', 'Vervelend', 'Rampzalig', 'Afschuwelijk', 'Dom', 
             'Walging', 'Vernederen', 'Egoïstisch', 'Tragisch', 'Hinderlijk', 
             'Haat', 'Kwetsend', 'Misselijkmakend', 'Vies']);
