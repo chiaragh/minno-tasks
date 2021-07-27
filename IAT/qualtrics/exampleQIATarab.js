@@ -29,46 +29,46 @@ var posWords = API.shuffle([
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
     		        {word: 'Mohamed'},
-                {word: 'Mohamedd'},
-                {word: 'Mohameddd'},
-		  {word: 'Mohamedddd'},
-            	  {word: 'Mohameddddd'},
-            	  {word: 'Salimm'},
-            	  {word: 'Salima'},
-                {word: 'Karima'},
-                {word: 'Habiba'},
-		  {word: 'Ashrafa'}  
+                {word: 'Amir'},
+                {word: 'Ali'},
+		  {word: 'Youssef'},
+            	  {word: 'Hamza'},
+            	  {word: 'Omar'},
+            	  {word: 'Ibrahim'},
+                {word: 'Anas'},
+                {word: 'Ayoub'},
+		  {word: 'Nassim'}  
 			], 
 			//Stimulus css (style)
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},	
 		category2 :	{
-			name : 'Other People', //Will appear in the data.
+			name : 'Andere mensen', //Will appear in the data.
 			title : {
-				media : {word : 'Other People'}, //Name of the category presented in the task.
+				media : {word : 'Andere mensen'}, //Name of the category presented in the task.
 				css : {color:'#31940F','font-size':'1.8em'}, //Style of the category title.
 				height : 4 //Used to position the "Or" in the combined block.
 			}, 
 			stimulusMedia : [ //Stimuli content as PIP's media objects
-    		        {word: 'Ernesto'},
-                {word: 'Matthais'},
-                {word: 'Maarten'},
-		 {word: 'Philippe'},
-            	  {word: 'Guillame'},
-            	  {word: 'Benoit'},
-            	  {word: 'Takuya'},
-                {word: 'Kazuki'},
-                {word: 'Chaiyo'},
-		  {word: 'Marcelo'}
+    		        {word: 'Arthur'},
+                {word: 'Noah'},
+                {word: 'Lucas'},
+		 {word: 'Liam'},
+            	  {word: 'Leon'},
+            	  {word: 'Jules'},
+            	  {word: 'Finn'},
+                {word: 'Louis'},
+                {word: 'Victor'},
+		  {word: 'Lewis'}
 			], 
 			//Stimulus css
 			stimulusCss : {color:'#31940F','font-size':'1.8em'}
 		},
 		attribute1 :
 		{
-			name : 'Bad',
+			name : 'Slecht',
 			title : {
-				media : {word : 'Bad'},
+				media : {word : 'Slecht'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
@@ -87,9 +87,9 @@ var posWords = API.shuffle([
 		},
 		attribute2 :
 		{
-			name : 'Good',
+			name : 'Goed',
 			title : {
-				media : {word : 'Good'},
+				media : {word : 'Goed'},
 				css : {color:'#0000FF','font-size':'1.8em'},
 				height : 4 //Used to position the "Or" in the combined block.
 			},
@@ -112,7 +112,6 @@ var posWords = API.shuffle([
 			
 	
 		} 
-		fullscreen:true 
-		isTouch:true
+	
 	});
 });
