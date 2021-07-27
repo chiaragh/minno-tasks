@@ -1,4 +1,4 @@
-define(['pipAPI', 'https://chiaragh.github.io/repository/IAT/qualtrics/quiat9.js'], function(APIConstructor, iatExtension){
+define(['pipAPI', 'https://chiaragh.github.io/repository/IAT/qualtrics/ADD1.js'], function(APIConstructor, iatExtension){
     var API = new APIConstructor();
     var posWords = API.shuffle([
 	    'Liefde', 'Vrolijk', 'Vriend', 'Plezier', 
