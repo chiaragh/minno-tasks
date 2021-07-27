@@ -119,15 +119,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			
 			////In each block, we can include a number of mini-blocks, to reduce repetition of same group/response.
 			////If you set the number of trials in any block to 0, that block will be skipped.
-			blockAttributes_nTrials : 20,
+			blockAttributes_nTrials : 15,
 			blockAttributes_nMiniBlocks : 5,
-			blockCategories_nTrials : 20,
+			blockCategories_nTrials : 15,
 			blockCategories_nMiniBlocks : 5,
-			blockFirstCombined_nTrials : 20,
+			blockFirstCombined_nTrials : 30,
 			blockFirstCombined_nMiniBlocks : 5,
-			blockSecondCombined_nTrials : 40, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
-			blockSecondCombined_nMiniBlocks : 10, 
-			blockSwitch_nTrials : 28,
+			blockSecondCombined_nTrials : 0, //Change to 0 if you want 5 blocks (you would probably want to increase blockFirstCombined_nTrials).
+			blockSecondCombined_nMiniBlocks : 0, 
+			blockSwitch_nTrials : 20,
 			blockSwitch_nMiniBlocks : 7,
 
 			//Should we randomize which attribute is on the right, and which on the left?
@@ -142,12 +142,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			remindError : true,
 
 			remindErrorText : '<p align="center" style="font-size:"0.6em"; font-family:arial">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Press the other key to continue.<p/>',
+			'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op het scherm komen. ' +
+			'Druk de andere toets (E/I) om verder te gaan.<p/>',
 
 			remindErrorTextTouch : '<p align="center" style="font-size:"1.4em"; font-family:arial">' +
-			'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-			'Touch the other side to continue.<p/>',
+			'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op het scherm komen. ' +
+			'Raak de andere kant van het scherm aan om verder te gaan.<p/>',
 
 			errorCorrection : true, //Should participants correct error responses?
 			errorFBDuration : 500, //Duration of error feedback display (relevant only when errorCorrection is false)
@@ -156,17 +156,17 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			fontColor : '#000000', //The default color used for printed messages.
 			
 			//Text and style for key instructions displayed about the category labels.
-			leftKeyText : 'Press "E" for', 
-			rightKeyText : 'Press "I" for', 
+			leftKeyText : 'Druk "E" voor', 
+			rightKeyText : 'Druk "I" voor', 
 			keysCss : {'font-size':'0.8em', 'font-family':'courier', color:'#000000'},
 			//Text and style for the separator between the top and bottom category labels.
-			orText : 'or', 
+			orText : 'of', 
 			orCss : {'font-size':'1.8em', color:'#000000'},
 			
 			instWidth : 99, //The width of the instructions stimulus
             
-			finalText : 'Press space to continue to the next task', 
-			finalTouchText : 'Touch the bottom green area to continue to the next task',
+			finalText : 'Druk op spatie om naar de volgende taak te gaan', 
+			finalTouchText : ' Raak het onderste groene deel van het scherm aan om verder te gaan naar de volgende taak',
 
 			touchMaxStimulusWidth : '50%', 
 			touchMaxStimulusHeight : '50%', 
@@ -180,12 +180,12 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 			instAttributePractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#0000ff">leftAttribute.</font>' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Plaats de linkervinger op de <b>E</b>-toets voor items die tot de categorie behoren van <font color="#0000ff">leftAttribute.</font>' +
+				'<br/>Plaats de rechtervinger op de <b>I</b>-toets voor items die tot de categorie behoren van <font color="#0000ff">rightAttribute</font>.<br/><br/>' +
+				'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op je scherm verschijnen. ' +
+				'Druk de andere toets (E of I) om verder te gaan.<br/>' +
+				'<u>Werk zo snel mogelijk</u> maar wees ook accuraat.<br/><br/></p>'+
+				'<p align="center">Druk op <b>spatie</b> als je klaar bent om te starten.</font></p></div>',
 			instAttributePracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -193,26 +193,26 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the the <b>left</b> green area for items that belong to the category <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#0000ff">rightAttribute</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Plaats de linkervinger op het groene gebied <b>links</b> voor items die tot de categorie behoren van <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Plaats de rechtervinger op het groene gebied <b>rechts</b> voor items die tot de categorie behoren van <font color="#0000ff">rightAttribute</font>.<br/>',
+						'Er zal 1 item per keer verschijnen.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op het scherm komen. Tik dan de andere kant van het scherm aan. <u>Werk zo snel mogelijk</u> maar wees ook accuraat.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Tik op het groene gebied <b>onderaan</b> om te starten.</p>',
 				'</div>'
 			].join('\n'),
 
 			instCategoriesPractice: '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Put a left finger on the <b>E</b> key for items that belong to the category <font color="#336600">leftCategory</font>. ' +
-				'<br/>Put a right finger on the <b>I</b> key for items that belong to the category <font color="#336600">rightCategory</font>.<br/>' +
-				'Items will appear one at a time.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>'+
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Plaats de linkervinger op de <b>E</b>-toets voor namen die vaker tot de categorie behoren van <font color="#336600">leftCategory</font>. ' +
+				'<br/>Plaats de rechtervinger op de <b>I</b>-toets voor namen die vaker tot de categorie behoren van <font color="#336600">rightCategory</font>.<br/>' +
+				'Er zal 1 naam per keer verschijnen.<br/><br/>' +
+				'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op je scherm verschijnen. ' +
+				'Druk de andere toets (E of I) om verder te gaan.<br/>' +
+				'<u>Werk zo snel mogelijk</u> maar wees ook accuraat.<br/><br/></p>'+
+				'<p align="center">Druk op <b>spatie</b> als je klaar bent om te starten.</font></p></div>',
 			instCategoriesPracticeTouch: [
 				'<div>',
 					'<p align="center">',
@@ -220,26 +220,27 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Put a left finger over the <b>left</b> green area for items that belong to the category <font color="#336600">leftCategory</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for items that belong to the category <font color="#336600">rightCategory</font>.<br/>',
-						'Items will appear one at a time.<br/>',
+						'Plaats de linkervinger op het groene gebied <b>links</b> voor namen die vaker tot de categorie behoren van <font color="#336600">leftCategory</font>.<br/>',
+						'Plaats de rechtervinger op het groene gebied <b>rechts</b> voor namen die vaker tot de categorie behoren van <font color="#336600">rightCategory</font>.<br/>',
+						'Er zal 1 item per keer verschijnen.<br/>',
 						'<br/>',
-						'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.',
+						'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op het scherm komen. Tik dan de andere kant van het scherm aan. <u>Werk zo snel mogelijk</u> maar wees ook accuraat.',
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Tik op het groene gebied <b>onderaan</b> om te starten.</p>',
+				
 				'</div>'
 			].join('\n'),
 
 			instFirstCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Each item belongs to only one category.<br/><br/>' +
-				'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. ' +
-				'Press the other key to continue.<br/>' + 
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Gebruik de <b>E</b>-toets voor <font color="#336600">leftCategory</font> en voor <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Gebruik de <b>I</b> key for <font color="#336600">rightCategory</font> en voor  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Elk item behoort tot slechts 1 categorie.<br/><br/>' +
+				'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> verschijnen. ' +
+				'Druk dan de andere toets (E of I) om verder te gaan.<br/>' + 
+				'<u>Werk zo snel mogelijk</u> maar wees ook accuraat.<br/><br/></p>' +
+				'<p align="center">Druk <b>spatie</b> om te starten.</font></p></div>',
 			instFirstCombinedTouch:[
 				'<div>',
 					'<p align="center">',
@@ -248,23 +249,25 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 					'<br/>',
 					'<p align="left" style="margin-left:5px">',
-						'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.</br>',
-						'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.</br>',
-							'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.</br>',
-						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+						'Plaats de linkervinger op het groene gebied <b>links</b> voor namen van <font color="#336600">leftCategory</font> en voor <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Plaats de rechtervinger op het groene gebied <b>rechts</b> voor namen van <font color="#336600">rightCategory</font> en voor <font color="#0000ff">rightAttribute</font>.<br/>',
+						'<br/>',	
+						'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op het scherm komen. Tik dan de andere kant van het scherm aan. <u>Werk zo snel mogelijk</u> maar wees ook accuraat.',				
+					'</p>',
+					'<p align="center">Tik op het groene gebied <b>onderaan</b> om te starten.</p>',
+				
 				'</div>'
 			].join('\n'),
 
 			instSecondCombined : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'This is the same as the previous part.<br/>' +
-				'Use the <b>E</b> key for <font color="#336600">leftCategory</font> and for <font color="#0000ff">leftAttribute</font>.<br/>' +
-				'Use the <b>I</b> key for <font color="#336600">rightCategory</font> and for  <font color="#0000ff">rightAttribute</font>.<br/>' +
-				'Each item belongs to only one category.<br/><br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'Dit is hetzelfde als het vorige deel.<br/>' +
+				'Gebruik de <b>E</b>-toets voor <font color="#336600">leftCategory</font> en voor <font color="#0000ff">leftAttribute</font>.<br/>' +
+				'Gebruik de <b>I</b>-toets voor <font color="#336600">rightCategory</font> en voor  <font color="#0000ff">rightAttribute</font>.<br/>' +
+				'Elk item behoort tot slechts 1 categorie.<br/><br/>' +
+				'<u>Werk zo snel mogelijk</u> maar wees ook accuraat.<br/><br/></p>' +
+				'<p align="center">Druk <b>spatie</b> om te starten.</font></p></div>',
 			instSecondCombinedTouch:[
 				'<div>',
 					'<p align="center"><u>Part blockNum of nBlocks</u></p>',
@@ -272,23 +275,26 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'<br/>',
 
 					'<p align="left" style="margin-left:5px">',
-						'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items and for <font color="#0000ff">leftAttribute</font>.<br/>',
-						'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items and for <font color="#0000ff">rightAttribute</font>.<br/>',
-						'<br/>',
-						'<u>Go as fast as you can</u> while being accurate.<br/>',
+						'Plaats de linkervinger op het groene gebied <b>links</b> voor namen van <font color="#336600">leftCategory</font> en voor <font color="#0000ff">leftAttribute</font>.<br/>',
+						'Plaats de rechtervinger op het groene gebied <b>rechts</b> voor namen van <font color="#336600">rightCategory</font> en voor <font color="#0000ff">rightAttribute</font>.<br/>',
+						'<br/>',					
+						'<u>Werk zo snel mogelijk</u> maar wees ook accuraat.',
+				
 					'</p>',
-					'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+					'<p align="center">Tik op het groene gebied <b>onderaan</b> om te starten.</p>',
+				
+				
 				'</div>'
 			].join('\n'),
 
 			instSwitchCategories : '<div><p align="center" style="font-size:20px; font-family:arial">' +
 				'<font color="#000000"><u>Part blockNum of nBlocks </u><br/><br/></p>' +
 				'<p style="font-size:20px; text-align:left; vertical-align:bottom; margin-left:10px; font-family:arial">' +
-				'<b>Watch out, the labels have changed position!</b><br/>' +
-				'Put the left finger on the <b>E</b> key for <font color="#336600">leftCategory</font>.<br/>' +
-				'Put the right finger on the <b>I</b> key for <font color="#336600">rightCategory</font>.<br/><br/>' +
-				'<u>Go as fast as you can</u> while being accurate.<br/><br/></p>' +
-				'<p align="center">Press the <b>space bar</b> when you are ready to start.</font></p></div>',
+				'<b>Opgelet, de labels zijn nu omgedraaid!</b><br/>' +
+				'Plaats je linkervinger op de <b>E</b>-toets voor <font color="#336600">leftCategory</font>.<br/>' +
+				'Plaats je rechtervinger op de <b>I</b>-toets voor <font color="#336600">rightCategory</font>.<br/><br/>' +
+				'<u>Werk zo snel mogelijk</u> maar wees ook accuraat.<br/><br/></p>' +
+				'<p align="center">Druk <b>spatie</b> om te starten.</font></p></div>',
 			instSwitchCategoriesTouch: [
 				'<div>',
 					'<p align="center">',
@@ -296,14 +302,15 @@ define(['pipAPI','pipScorer','underscore'], function(APIConstructor, Scorer, _) 
 					'</p>',
 					'<p align="left" style="margin-left:5px">',
 						'<br/>',
-						'Watch out, the labels have changed position!<br/>',
-							'Put a left finger over the <b>left</b> green area for <font color="#336600">leftCategory</font> items.<br/>',
-							'Put a right finger over the <b>right</b> green area for <font color="#336600">rightCategory</font> items.<br/>',
-							'Items will appear one at a time.',
+						'Opgelet, de labels zijn nu omgedraaid!<br/>',
+							'Plaats je linkervinger op het groene gebied <b>links</b> voor namen van <font color="#336600">leftCategory</font>.<br/>',
+							'Plaats de rechtervinger op het groene gebied <b>rechts</b> voor namen van <font color="#336600">rightCategory</font>.<br/>',
+							'Er zal 1 item per keer verschijnen.<br/>',
 							'<br/>',
-							'If you make a mistake, a red <font color="#ff0000"><b>X</b></font> will appear. Touch the other side. <u>Go as fast as you can</u> while being accurate.<br/>',
-						'</p>',
-						'<p align="center">Touch the <b>lower </b> green area to start.</p>',
+							'Als je een fout maakt, zal een rode <font color="#ff0000"><b>X</b></font> op het scherm komen. Tik dan de andere kant van het scherm aan. <u>Werk zo snel mogelijk</u> maar wees ook accuraat.',
+					'</p>',
+					'<p align="center">Tik op het groene gebied <b>onderaan</b> om te starten.</p>',
+				
 				'</div>'
 			].join('\n'),
 
